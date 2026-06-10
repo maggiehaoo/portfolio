@@ -1,10 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Maggie's Portfolio</title>
+    <title>Maggie Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 600px; /* adjust later if needed */
+        }
+
+        .laptop {
+            width: 100%;
+            display: block;
+        }
+
+        /* TEXT ON TOP OF LAPTOP */
+        .text-overlay {
+            position: absolute;
+            top: 35%;   /* adjust this to move text up/down */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 70%;
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        /* makes it feel clickable later */
+        .click-area {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 8px 12px;
+            border: 1px solid black;
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+        }
+
+        .click-area:hover {
+            background: black;
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Hi, I'm Maggie.</h1>
-    <p>My website is coming soon!</p>
+
+<div class="container">
+
+    <!-- YOUR DOODLE -->
+    <img class="laptop" src="images/computer-outline.png">
+
+    <!-- TEXT ON TOP -->
+    <div class="text-overlay">
+
+        <div class="title">hi, i'm maggie!</div>
+
+        <div class="subtitle">click here for my work</div>
+
+        <a class="click-area" href="projects.html">
+            enter
+        </a>
+
+    </div>
+
+</div>
+
 </body>
 </html>
