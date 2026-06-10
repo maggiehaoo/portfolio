@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Projects</title>
 
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: white;
+        }
+
+        /* PAGE LAYOUT */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 50px;
+        }
+
+        /* MOBILE: 2 columns */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* CARD */
+        .card {
+            position: relative;
+            text-align: center;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* HOVER EFFECT (ONLY FOR REAL PROJECTS) */
+        .card.active:hover {
+            transform: scale(1.05) rotate(1deg);
+        }
+
+        /* OUTLINE IMAGE */
+        .outline {
+            width: 100%;
+            display: block;
+        }
+
+        /* IMAGE INSIDE CARD */
+        .project-img {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: auto;
+        }
+
+        /* TEXT UNDER IMAGE */
+        .title {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        /* inactive cards */
+        .inactive {
+            opacity: 0.4;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="grid">
+
+    <!-- CARD 1 -->
+    <a href="girls.html" class="card active">
+        <img class="outline" src="images/credential-outline.png">
+        <img class="project-img" src="images/placeholder.jpg">
+        <div class="title">Girls at the Games</div>
+    </a>
+
+    <!-- CARD 2 -->
+    <a href="rivermen.html" class="card active">
+        <img class="outline" src="images/credential-outline.png">
+        <img class="project-img" src="images/placeholder.jpg">
+        <div class="title">Langley Rivermen</div>
+    </a>
+
+    <!-- CARD 3 -->
+    <a href="rose.html" class="card active">
+        <img class="outline" src="images/credential-outline.png">
+        <img class="project-img" src="images/placeholder.jpg">
+        <div class="title">Rose Tinted Ceilings</div>
+    </a>
+
+    <!-- CARD 4 -->
+    <div class="card inactive">
+        <img class="outline" src="images/credential-outline.png">
+        <img class="project-img" src="images/placeholder.jpg">
+        <div class="title">To be added</div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="card inactive">
+        <img class="outline" src="images/credential-outline.png">
+        <img class="project-img" src="images/placeholder.jpg">
+        <div class="title">To be added</div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="card inactive">
+        <img class="outline" src="images/credential-outline.png">
+        <img class="project-img" src="images/placeholder.jpg">
+        <div class="title">To be added</div>
+    </div>
+
+</div>
+
+</body>
+</html>
