@@ -10,7 +10,7 @@
             background: white;
         }
 
-        /* PAGE LAYOUT */
+        /* GRID LAYOUT */
         .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -25,44 +25,61 @@
             }
         }
 
-        /* CARD */
+        /* CARD WRAPPER */
         .card {
             position: relative;
             text-align: center;
-            transition: transform 0.3s ease;
             cursor: pointer;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            transition: transform 0.25s ease;
         }
 
-        /* HOVER EFFECT (ONLY FOR REAL PROJECTS) */
+        /* HOVER ONLY FOR ACTIVE PROJECTS */
         .card.active:hover {
             transform: scale(1.05) rotate(1deg);
         }
 
-        /* OUTLINE IMAGE */
+        /* OUTLINE FRAME */
         .outline {
             width: 100%;
             display: block;
         }
 
-        /* IMAGE INSIDE CARD */
+        /* IMAGE INSIDE FRAME */
         .project-img {
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translateX(-50%);
             width: 60%;
-            height: auto;
+            margin-top: -75%;
+            z-index: 1;
         }
 
-        /* TEXT UNDER IMAGE */
+        /* TITLE UNDER IMAGE */
         .title {
-            margin-top: 10px;
+            margin-top: -10px;
             font-size: 16px;
+            color: black;
         }
 
-        /* inactive cards */
+        /* INACTIVE CARDS */
         .inactive {
             opacity: 0.4;
+        }
+
+        /* REMOVE ALL LINK STYLING (IMPORTANT) */
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:visited {
+            color: black;
+        }
+
+        a:hover {
+            color: black;
         }
 
     </style>
@@ -75,42 +92,42 @@
     <!-- CARD 1 -->
     <a href="girls.html" class="card active">
         <img class="outline" src="images/credential-outline.png">
-        <img class="project-img" src="images/placeholder.jpg">
+        <img class="project-img" src="images/placeholder.png">
         <div class="title">Girls at the Games</div>
     </a>
 
     <!-- CARD 2 -->
     <a href="rivermen.html" class="card active">
         <img class="outline" src="images/credential-outline.png">
-        <img class="project-img" src="images/placeholder.jpg">
+        <img class="project-img" src="images/placeholder.png">
         <div class="title">Langley Rivermen</div>
     </a>
 
     <!-- CARD 3 -->
     <a href="rose.html" class="card active">
         <img class="outline" src="images/credential-outline.png">
-        <img class="project-img" src="images/placeholder.jpg">
+        <img class="project-img" src="images/placeholder.png">
         <div class="title">Rose Tinted Ceilings</div>
     </a>
 
     <!-- CARD 4 -->
     <div class="card inactive">
         <img class="outline" src="images/credential-outline.png">
-        <img class="project-img" src="images/placeholder.jpg">
+        <img class="project-img" src="images/placeholder.png">
         <div class="title">To be added</div>
     </div>
 
     <!-- CARD 5 -->
     <div class="card inactive">
         <img class="outline" src="images/credential-outline.png">
-        <img class="project-img" src="images/placeholder.jpg">
+        <img class="project-img" src="images/placeholder.png">
         <div class="title">To be added</div>
     </div>
 
     <!-- CARD 6 -->
     <div class="card inactive">
         <img class="outline" src="images/credential-outline.png">
-        <img class="project-img" src="images/placeholder.jpg">
+        <img class="project-img" src="images/placeholder.png">
         <div class="title">To be added</div>
     </div>
 
