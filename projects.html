@@ -10,7 +10,7 @@
             background: white;
         }
 
-        /* GRID LAYOUT */
+        /* GRID */
         .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -18,7 +18,6 @@
             padding: 50px;
         }
 
-        /* MOBILE: 2 columns (gives 3 rows) */
         @media (max-width: 768px) {
             .grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -27,36 +26,43 @@
             }
         }
 
-        /* CARD CONTAINER */
+        /* CARD = FRAME SYSTEM */
         .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-    text-align: center;
-    cursor: pointer;
+            cursor: pointer;
+            text-align: center;
 
-    transition: transform 0.25s ease;
-}
+            transition: transform 0.25s ease;
+        }
 
-        /* HOVER EFFECT (ONLY ACTIVE CARDS) */
         .card.active:hover {
             transform: scale(1.05) rotate(1deg);
         }
 
-        /* OUTLINE FRAME (YOUR DOODLE PNG) */
+        /* OUTLINE (your doodle frame) */
         .outline {
-            width: 100%;
+            width: 40%;
             display: block;
             z-index: 1;
         }
 
-        /* PERFECT SQUARE IMAGE CONTAINER */
-       .img-box {
-    width: 40%;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-}
+        /* IMAGE INSIDE FRAME */
+        .img-box {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 22%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+
+            z-index: 2;
+        }
 
         .img-box img {
             width: 100%;
@@ -65,7 +71,7 @@
             display: block;
         }
 
-        /* TITLE TEXT */
+        /* TITLE UNDER FRAME */
         .title {
             margin-top: 10px;
             font-size: 16px;
@@ -79,7 +85,7 @@
             opacity: 0.4;
         }
 
-        /* REMOVE LINK STYLING COMPLETELY */
+        /* REMOVE LINK STYLING */
         a {
             text-decoration: none;
             color: black;
@@ -92,11 +98,7 @@
         a:hover {
             color: black;
         }
-.title {
-    margin-top: 8px;
-    font-size: 16px;
-    color: black;
-}
+
     </style>
 </head>
 
@@ -107,54 +109,66 @@
     <!-- CARD 1 -->
     <a href="girls.html" class="card active">
         <img class="outline" src="images/credential-outline.png">
+
         <div class="img-box">
             <img src="images/placeholder.png">
         </div>
+
         <div class="title">Girls at the Games</div>
     </a>
 
     <!-- CARD 2 -->
     <a href="rivermen.html" class="card active">
         <img class="outline" src="images/credential-outline.png">
+
         <div class="img-box">
             <img src="images/placeholder.png">
         </div>
+
         <div class="title">Langley Rivermen</div>
     </a>
 
     <!-- CARD 3 -->
     <a href="rose.html" class="card active">
         <img class="outline" src="images/credential-outline.png">
+
         <div class="img-box">
             <img src="images/placeholder.png">
         </div>
+
         <div class="title">Rose Tinted Ceilings</div>
     </a>
 
     <!-- CARD 4 -->
     <div class="card inactive">
         <img class="outline" src="images/credential-outline.png">
+
         <div class="img-box">
             <img src="images/placeholder.png">
         </div>
+
         <div class="title">To be added</div>
     </div>
 
     <!-- CARD 5 -->
     <div class="card inactive">
         <img class="outline" src="images/credential-outline.png">
+
         <div class="img-box">
             <img src="images/placeholder.png">
         </div>
+
         <div class="title">To be added</div>
     </div>
 
     <!-- CARD 6 -->
     <div class="card inactive">
         <img class="outline" src="images/credential-outline.png">
+
         <div class="img-box">
             <img src="images/placeholder.png">
         </div>
+
         <div class="title">To be added</div>
     </div>
 
