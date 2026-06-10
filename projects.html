@@ -19,14 +19,31 @@
         }
 
         /* MOBILE: 2 columns (gives 3 rows) */
-        @media (max-width: 768px) {
-            .grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-                padding: 20px;
-            }
-        }
+       @media (max-width: 768px) {
 
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        padding: 18px;
+    }
+
+    /* make cards feel less cramped */
+    .card {
+        transform: scale(0.95);
+    }
+
+    /* stop text wrapping awkwardly */
+    .title {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    /* slightly adjust image positioning for smaller screens */
+    .img-box {
+        width: 45%;
+        top: 48%;
+    }
+}
         /* CARD CONTAINER */
        .card {
     position: relative;
@@ -110,6 +127,8 @@
     font-size: 16px;
     color: black;
 }
+
+        white-space: nowrap;
     </style>
 </head>
 
