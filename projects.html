@@ -28,7 +28,9 @@
         }
 
         /* CARD CONTAINER */
-        .card {
+       .card {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,16 +48,23 @@
 
         /* OUTLINE FRAME (YOUR DOODLE PNG) */
         .outline {
-            width: 100%;
-            display: block;
-            z-index: 1;
-        }
+    width: 100%;
+    display: block;
+    z-index: 1;
+}
 
         /* PERFECT SQUARE IMAGE CONTAINER */
        .img-box {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     width: 40%;
     aspect-ratio: 1 / 1;
     overflow: hidden;
+
+    z-index: 2;
 }
 
         .img-box img {
@@ -67,12 +76,13 @@
 
         /* TITLE TEXT */
         .title {
-            margin-top: 10px;
-            font-size: 16px;
-            color: black;
-            position: relative;
-            z-index: 3;
-        }
+    margin-top: 10px;
+    font-size: 16px;
+    color: black;
+
+    position: relative;
+    z-index: 3;
+}
 
         /* INACTIVE CARDS */
         .inactive {
